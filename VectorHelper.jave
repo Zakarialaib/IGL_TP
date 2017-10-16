@@ -51,5 +51,33 @@ public int VectMin(){
 	}
 	return m;
 }
+public void VectMultiplication(int value){
+	for(int i=0;i<this.VectSize();i++){
+		Vecteur.set(i,Vecteur.get(i)*value);
+	                                  }
+	                                     }
+public void VectDevision(int value){
+	for(int i=0;i<this.VectSize();i++){
+			Vecteur.set(i,Vecteur.get(i)/value);
+                                	  }
+                                   }
+public void VectAddition(int value){
+	for(int i=0;i<this.VectSize();i++){
+			Vecteur.set(i,Vecteur.get(i)+value);
+		                              }
+                                   }
+public void VectSoustraction(int value) {
+   	for(int i=0;i<this.VectSize();i++){
+            Vecteur.set(i,Vecteur.get(i)-value);
+                                	  }
+                                        }
+public VectorHelper Somme(VectorHelper V) throws Exception{
+	if(Vecteur.size()!=V.VectSize()) throw new SommeException();
+	VectorHelper s=new VectorHelper(Vecteur.size());
+	for(int i=0;i<this.VectSize();i++){
+		s.addVectElemnt(this.Vecteur.get(i)+V.getElemnt(i));
+	}
+	return s;
+                                 }
   
 }
