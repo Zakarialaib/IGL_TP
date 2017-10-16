@@ -1,0 +1,9 @@
+import java.util.ArrayList;
+public class VectorHelper {
+
+public ArrayList<Integer> Vecteur;
+public VectorHelper(int size){
+	Vecteur=new ArrayList<Integer>(size);
+  }
+  
+}
