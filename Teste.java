@@ -19,18 +19,22 @@ public class Teste {
 
 		VectorHelper V=null;
 		boolean b=true;
-		while(b){
-			int ii = sc.nextInt();
+	while(b)
+		{
+		System.out.println("entrer Votre choix : "); 
+		int ii = sc.nextInt();
 		switch(ii){
 		case 1 : {
 			System.out.println("Veuillez entrer la taille du vecteur");
 			int size = sc.nextInt();
 	        V = new VectorHelper(size);
+	        System.out.println(size);
 	        System.out.println("Veuillez entrer les elements du vecteur");
 	        for(int i=0;i<size;i++){
 	        	int value=sc.nextInt();
 	        	V.addVectElemnt(value);
-	        }break;
+	        }
+	        break;
 		         }
 		case 2 : {
 			System.out.println("Veuillez entrer la taille du vecteur 2eme");
@@ -38,12 +42,16 @@ public class Teste {
 			VectorHelper V2 = new VectorHelper(size2);
 	        System.out.println("Veuillez entrer les elements du vecteur");
 	        for(int i=0;i<size2;i++){
-	        	int value=sc.nextInt();
-	        	V2.addVectElemnt(value);
-	        }
-
-	        VectorHelper result = V.Somme(V2);
-	        result.Afficher();
+	        	V2.addVectElemnt(sc.nextInt());
+	        	}
+	        try {
+	        	 VectorHelper result = V.Somme(V2);
+	 	        result.Afficher();
+        	}catch (SommeException e)
+        	{
+        		System.out.println(e.toString()); 
+        	}
+	       
 		         }break;
 		case 3 : {
 			   V.Trie();
@@ -77,10 +85,12 @@ public class Teste {
 			}break;
 		            }
 		         }break;
-		case 7 : V.Afficher();break;
-		case 0 : b=false;
-}
-		}
+		case 7 : {
+			V.Afficher();break;}
+		case 0 : {
+			b=false ; break;}
+
+							}
 
 
 
