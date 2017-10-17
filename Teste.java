@@ -1,10 +1,11 @@
-import java.io.InputStream;
+
+
 import java.util.Scanner;
 
 public class Teste {
 
 	public static void main(String[] args) throws Exception {
-		Scanner sc=new Scanner(System.in); 
+		Scanner sc=new Scanner(System.in);
 		System.out.println("Application 2 TP1 IGL 1CS");
 		System.out.println("Que voulez vous faire ?");
 		System.out.println("1-Créer un nouveau vecteur");
@@ -19,7 +20,7 @@ public class Teste {
 
 		VectorHelper V=null;
 		boolean b=true;
-	while(b)
+		while(b)
 		{
 		System.out.println("entrer Votre choix : "); 
 		int ii = sc.nextInt();
@@ -91,9 +92,7 @@ public class Teste {
 			b=false ; break;}
 
 							}
-
-
-
+		}
 	}
 
 }
